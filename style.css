@@ -1,5 +1,6 @@
 h1 {
      font-family: Helvetica;
+     border-bottom: 1pxs solid;
 }
 h2 { 
     padding: 5px 0px;
@@ -8,29 +9,22 @@ h2 {
     font:bold;
 }
 body {
-    padding: 0 100px;
+    padding: 0 150px;
     background-color: #e2e8eb;
     
-}
-.inStock, .notInStock {
-    padding: 5px;
-    margin: 10px 0;
-    font-family: Helvetica;
 }
   
 .inStock {
-    /* background-color: #fff; */
+    background-color: #fff;
     border: white 1px solid;
     border-radius: 5px;
     display: flex;
-    
+    padding: 5px;
+    margin: 10px 0;
+    font-family: Helvetica;  
 }
 .lightMode {
     background-color: #e2e8eb;
-}
-.notInStock {
-    display: none;
-
 }
 #button {
     font-family: Helvetica;
@@ -46,9 +40,6 @@ body {
 }
 .itemDarkMode {
     background-color: #234452;
-    color: #fff;
-    border: #234452 1px solid;
-    display: flex;
 }
 .buttonDarkMode {
     background-color: #000a0e;
