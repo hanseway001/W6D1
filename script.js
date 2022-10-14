@@ -72,12 +72,13 @@ $.each(storeItems, function( index, value ) {
     if (value.inStock) {  
     // a.append('<p style="background-color:tomato;">' + JSON.stringify(value) + '</p>');  
   //  a.append('<p class="inStock">' + value.name + ': $' + value.price + '</p>');
-        a.append('<div class="inStock"><h2>$' + value.price + '</h2>' + '<h2>' + value.name + '</h2>' + '<h2>' + value.details + '</h2></div>' )
-        a.css( {
+        a.append('<div id="items" class="inStock"><h2>$' + value.price + '</h2>' + '<h2>' + value.name + '</h2>' + '<h2>' + value.details + '</h2></div>' )
+        $('div').toggleClass('lightMode');
+        // a.css( {
             // 'display': 'flex',
-            'color': '#000',
+            // 'color': '#000',
             //'font-weight' : 'bold'
-        });
+        // });
         // $('.instock').addClass('wrap');
     } else {
     // a.append('<p class="notInStock" style="background-color:blue;">' + JSON.stringify(value) + '</p>'); 
@@ -89,7 +90,8 @@ $.each(storeItems, function( index, value ) {
 $('#button').click(function(){
     $('#contentContainer').toggleClass('darkMode');
    // a.toggleClass('itemDarkMode');
-    $('#products').toggleClass('itemDarkmode');
-    $('#button').toggleClass('itemDarkMode');
+    $('div').toggleClass('itemDarkmode');
+    // $('div').removeClass('inStock');
+    $('#button').toggleClass('buttonDarkMode');
 
 });
